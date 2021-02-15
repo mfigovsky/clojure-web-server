@@ -22,11 +22,16 @@
   (db/add-user! db (:username data))
   (http/ok "user added"))
 
+(defn remove-user! [{:keys [::db data]}]
+  (db/remove-user! db (:username data))
+  (http/ok "user removed"))
+
 (defn api-routes []
   [[:any (parse/body-params)]
    [:get "hello" #'hello-world]
    [:get "users" #'get-users]
-   [:post "user" #'add-user!]])
+   [:post "user" #'add-user!]
+   [:post "removeuser" #'remove-user!]])
 
 
 (defrecord WebServer [port mongo-db]

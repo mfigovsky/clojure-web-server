@@ -4,7 +4,9 @@
                  [com.stuartsierra/component.repl "0.2.0"]
                  [com.google.guava/guava "19.0"]
                  [com.novemberain/monger "3.1.0"]
-                 [funcool/catacumba "2.2.2"]]
+                 [funcool/catacumba "2.2.2"]
+                 [http-kit "2.5.1"]
+                 [compojure "1.6.2"]]
 
   :target-path "target/%s"
   :uberjar-name "clojure-web-server-standalone.jar"

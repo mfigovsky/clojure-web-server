@@ -25,6 +25,9 @@
 (defn add-user! [{:keys [db]} name]
   (mc/insert db "users" {:name name}))
 
+(defn remove-user! [{:keys [db]} name]
+  (mc/remove db "users"  {:name name}))
+
 ;; ===========================================================================
 ;; component
 (comment
